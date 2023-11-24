@@ -7,7 +7,7 @@ Global:
   AllowRPC:  false # true for remote service with rpc, false for pure client SDK, default is false
   # if EnableRules is empty, it means all rules are enabled, but if EnableRules contains some ruleIDs, only these rules are enabled.
   # Then DLP will remove some ruleIDs if they are in DisableRules.
-  EnableRules: []
+  EnableRules: [37,38]
   # disable a certain rule by push ruleID in disableRules
   DisableRules: []
   MaxLogInput: 4096
@@ -693,7 +693,7 @@ Rules:
       EnGroup: user_data
       CnGroup: 用户数据
     Filter:
-      BDict: ["Github","github","GitHub","pgadmin"]
+      BDict: ["Github","github","GitHub","pgadmin","momenta","artifactory"]
   - RuleID: 38
     InfoType: API_KEY
     Description: api_key
